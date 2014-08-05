@@ -22,6 +22,23 @@ Requirements
 
 * Slack (this one is sort of key)
 * requests
+* 
+
+Running from Spotlight
+======================
+To run tell from spotlight on OS X, open `AppleScript Editor` and past in the following code:
+```applescript
+set channel to the text returned of (display dialog "Channel" default answer "")
+if channel is equal to "" then return
+
+set message to the text returned of (display dialog "Message" default answer "")
+if channel is equal to "" then return
+
+set tell_script to "tell"
+do shell script tell & " " & (quoted form of channel) & " " & (quoted form of message)
+```
+
+Save the script, choosing to save it as an Application instead of a Script. This script assumes that you have already put tell on the system path. as tell. Either `mv tell.py /usr/local/bin/tell; chmod +x /usr/local/bin/tell` or change the contents of the variable `tell_script` (remember that the path will need to be absolute).
 
 Bugs and Feature Requests
 =========================
