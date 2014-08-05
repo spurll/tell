@@ -11,7 +11,7 @@ Configuration
 
 You'll need to create a file called `config.py` containing your token (obtained from http://api.slack.com), the desired user name for your bot, and the URL of the image you'd like to use for its avatar. For example:
 
-```
+```python
 TOKEN = 'XXXX-XXXX-XXXX-XXXX-XXXX'
 USER = 'BotName'
 ICON_URL = 'https://secure.gravatar.com/avatar/AVATAR_URL.jpg'
@@ -22,23 +22,17 @@ Requirements
 
 * Slack (this one is sort of key)
 * requests
-* 
 
 Running from Spotlight
 ======================
-To run tell from spotlight on OS X, open `AppleScript Editor` and past in the following code:
+
+`Tell.app` allows you to run tell from Spotlight on OS X. You'll need to open `Tell.scpt` and edit this line to point to the appropriate location:
+
 ```applescript
-set channel to the text returned of (display dialog "Channel" default answer "")
-if channel is equal to "" then return
-
-set message to the text returned of (display dialog "Message" default answer "")
-if channel is equal to "" then return
-
-set tell_script to "tell"
-do shell script tell & " " & (quoted form of channel) & " " & (quoted form of message)
+set tell_script to "~/Development/tell/tell.py"
 ```
 
-Save the script, choosing to save it as an Application instead of a Script. This script assumes that you have already put tell on the system path. as tell. Either `mv tell.py /usr/local/bin/tell; chmod +x /usr/local/bin/tell` or change the contents of the variable `tell_script` (remember that the path will need to be absolute).
+Export the script as an Application and copy `Tell.app` into your Applications directory.
 
 Bugs and Feature Requests
 =========================
