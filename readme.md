@@ -24,7 +24,7 @@ Requirements
 * requests
 
 Running from Spotlight
-======================
+----------------------
 
 `Tell.app` allows you to run tell from Spotlight on OS X. You'll need to open `Tell.scpt` and edit this line to point to the appropriate location:
 

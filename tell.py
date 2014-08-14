@@ -42,6 +42,7 @@ def send_message(destination, message):
                "channel": destination,
                "username": config.USER,
                "icon_url": config.ICON_URL,
+               "link_names": 1,
                "text": message}
     r = post("https://slack.com/api/chat.postMessage", data=payload)
 
