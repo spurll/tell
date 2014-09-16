@@ -1,7 +1,7 @@
 Tell
 ====
 
-Sends a message via Terminal to a user or channel in Slack.
+Sends a message via Terminal to a user or channel in Slack. It's basically just a really simple command-line wrapper for [SlackUtils](https://github.com/spurll/slackutils/).
 
 Installation
 ============
@@ -20,8 +20,7 @@ ICON_URL = 'https://secure.gravatar.com/avatar/AVATAR_URL.jpg'
 Requirements
 ------------
 
-* Slack (this one is sort of key)
-* requests
+* [slackutils](https://github.com/spurll/slackutils/)
 
 Running from Spotlight
 ----------------------
