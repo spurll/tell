@@ -3,6 +3,11 @@ Tell
 
 Sends a message via Terminal to a user or channel in Slack. It's basically just a really simple command-line wrapper for [SlackUtils](https://github.com/spurll/slackutils/).
 
+Mark
+====
+
+Marks all Slack channels and private groups as read.
+
 Installation
 ============
 
@@ -32,6 +37,8 @@ set tell_script to "~/Development/tell/tell.py"
 ```
 
 Export the script as an Application and copy `Tell.app` into your Applications directory.
+
+(`Mark.app` works similarly.)
 
 Bugs and Feature Requests
 =========================
